@@ -1,0 +1,79 @@
+.box{
+  @include background-color(#fff);
+  .header{
+    .kind_search{
+      @include background-color(#fff);
+      @include rect(100%, 100%);
+      @include flexbox();
+      @include justify-content();
+      @include align-items();
+      position: relative;
+      @include text-color(#999);
+      .iconfont{
+        position: absolute;
+        left: 0.2rem;
+        @include font-size(0.2rem);
+      }
+      input{
+        border: 1px solid #ccc;
+        @include rect(90%, 0.3rem);
+        @include padding(0 0 0 0.3rem);
+        @include font-size(0.12rem);
+      }
+    }
+  }
+  .content{
+    .kindContent{
+      @include flexbox();
+      .kindContent_left{
+        @include rect(0.8rem, auto);
+        ul{
+          @include padding(0.15rem 0 0 0);
+          @include rect(1rem, 100%);
+          @include background-color(#f9f9f9);
+          li{
+            @include rect(1rem, .44rem);
+            @include text-color(#666);
+
+            @include text-align();
+            @include line-height(.44rem);
+            border-bottom: 1px solid #f2f2f2;
+            &.active{
+              @include text-color(#f66);
+              border-left:2px solid #f66;
+              @include background-color(#fff);
+            }
+            span{
+              @include font-size(0.13rem);
+            }
+          }
+        }
+      }
+      .contentShow{
+        @include rect(100%, auto);
+        .kindContent_right{
+          @include rect(auto, auto);
+          @include padding(0.15rem 0 0 0.3rem);
+          ul{
+            @include flexbox();
+            @include rect(100%, auto);
+            flex-wrap: wrap;
+            li{
+              @include margin(0 0.1rem 0.1rem 0.1rem);
+              @include rect(0.6rem,1rem);
+              @include text-align();
+              img{
+                @include rect(0.7rem,0.7rem);
+              }
+              p{
+                @include margin(0.1rem 0 0 0);
+                @include font-size(0.11rem);
+                @include text-color(#999);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

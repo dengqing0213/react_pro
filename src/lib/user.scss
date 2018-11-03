@@ -1,0 +1,123 @@
+.user_header{
+  @include rect(100%, 1.5rem);
+  @include background-color(#ff464e);
+  background-size: 100%;
+  @include text-color(#fff);
+  span{
+    position: absolute;
+    left:0.1rem;
+    top:0.03rem;
+    @include font-size(0.26rem);
+  }
+  .user_header_top{
+    @include font-size(0.18rem);
+    @include rect(100%, 0.5rem);
+    @include flexbox();
+    @include justify-content();
+    @include align-items();
+    flex-wrap: nowrap;
+  }
+  .user_header_bottom{
+    @include rect(100%, 1rem);
+    @include text-align();
+    @include line-height(1rem);
+    @include font-size(0.2rem);
+    i{
+      &:nth-child(1){
+        @include margin(0 0.15rem 0 0);
+      }
+      &:nth-child(2){
+        @include margin(0 0 0 0.15rem);
+      }
+    }
+  }
+  .login_bottom{
+    @include flexbox();
+    @include align-items();
+    @include padding(0 0 0 0.5rem);
+    .img_box{
+      @include rect(0.6rem, 0.6rem);
+      @include margin(0 0.15rem 0 0);
+      img{
+        @include border-radius(50%);
+        @include rect(100%, 100%);
+      }
+    }
+  }
+}
+.my_order{
+  @include padding(0 0.15rem);
+  h1{
+    @include font-weight(normal);
+    border-bottom: 1px solid #ccc;
+    @include padding(0 0.1rem 0 0.2rem);
+    @include rect(100%, 0.44rem);
+    @include line-height(0.44rem);
+    @include font-size(0.14rem);
+    span{
+      @include text-color(#999);
+      float: right;
+    }
+  }
+  ul{
+    @include rect(100%, 0.8rem);
+    @include flexbox();
+    @include justify-content(space-around);
+    li{
+      @include text-align();
+      span{
+        @include font-size(0.3rem);
+        @include text-color(#999);
+      }
+      p{
+        @include font-size(0.13rem);
+        color: rgba(0, 0, 0, 0.6);
+        @include margin(0.05rem 0 0 0);
+      }
+    }
+  }
+}
+.order_img{
+  @include rect(100%,0.8rem);
+  img{
+    @include rect(100%, auto);
+  }
+}
+.my_assets{
+  @include padding(0 0.15rem);
+  ul{
+    @include rect(100%,auto);
+    li{
+      @include rect(100%, 0.5rem);
+      @include text-color(#333);
+      @include font-size(0.14rem);
+      border-bottom: 1px solid #f0f0f0;
+      p{
+        @include line-height(0.5rem);
+        .iconfont{
+          @include font-size(0.2rem);
+          @include text-color(#ccc);
+          @include margin(0 0.1rem 0 0);
+        }
+        i{
+          float: right;
+          @include text-color(#999);
+        }
+      }
+      &.exit{
+        @include rect(100%,auto);
+        min-height: 0.08rem;
+        border-bottom: none;
+        text-align: center;
+        .exit_button{
+          @include rect(1rem,0.44rem);
+          @include line-height(0.44rem);
+          border-radius: 5px;
+          border:1px solid #999999;
+          @include background-color(#fff);
+          @include margin(0.08rem 0 0 0);
+        }
+      }
+    }
+  }
+}

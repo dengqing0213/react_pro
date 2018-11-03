@@ -1,0 +1,43 @@
+.box{
+  .register_header {
+    @include rect(100%, 0.44rem);
+    @include background-color(#f66);
+    ul{
+      @include flexbox();
+      @include justify-content(space-between);
+      @include padding(0 0.1rem);
+      li{
+        @include text-align();
+        @include text-color(#fff);
+        @include font-size(0.16rem);
+        @include line-height(0.44rem);
+        span{
+          @include font-size(0.2rem);
+        }
+      }
+    }
+  }
+  .register_content{
+    @include padding(0 0.15rem);
+    .input_value{
+      @include rect(100%, 0.4rem);
+      @include margin(0.1rem);
+      @include flexbox();
+      @include align-items();
+      input{
+        border: none;
+      }
+      ::-webkit-input-placeholder{
+        color:#999;
+      }
+    }
+    .register_btn{
+      @include text-color(#fff);
+      @include rect(100%, 0.44rem);
+      @include background-color(#ff464e);
+      border: none;
+      @include font-size(0.20rem);
+      @include line-height(0.44rem);
+    }
+  }
+}

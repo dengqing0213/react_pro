@@ -1,0 +1,71 @@
+@import '@/lib/reset.scss';
+@import '@/lib/kind.scss';
+@import '@/lib/user.scss';
+@import '@/lib/register.scss';
+@import '@/lib/login.scss';
+@import '@/lib/cart.scss';
+html, body, .container, #root {
+  @include rect(100%, 100%);
+}
+
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .box {
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    overflow: hidden;
+    .header {
+      @include rect(100%, 0.44rem);
+    }
+    .content {
+      @include flex();
+      @include rect(100%, auto);
+      @include overflow();
+      .proList {
+        .proItem {
+          @include rect(100%, 1rem);
+          @include flexbox();
+          @include border(0 0 1px 0, #eee, solid);
+          .itemImg {
+            @include rect(1rem, 100%);
+
+            img {
+                @include rect(0.9rem, 0.9rem);
+                @include border(1px, #f66, solid);
+                @include margin(0.05rem);
+            }
+          }
+          .itemInfo {
+            @include flex();
+            @include text-color(#333);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    @include rect(100%, 0.5rem);
+    ul {
+      @include rect(100%, 100%);
+      @include flexbox();
+      a {
+        @include flex();
+        @include text-align();
+        @include text-color(#999);
+        p{
+          @include font-size(0.2rem);
+        }
+        span{
+          @include font-size(0.11rem);
+        }
+        &.active {
+          @include text-color(#f66);
+        }
+      }
+    }
+  }
+}
